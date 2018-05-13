@@ -1,4 +1,4 @@
-import { Component } from '@angular/coore';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
