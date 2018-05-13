@@ -11,6 +11,10 @@ export class RecipeListComponent implements OnInit {
     new Recipe(
       'A test recipe',
       'test description',
+      'https://www.campbellsoup.co.uk/img/recipes/6-campbells-vegetarian-pizza-recipe.jpg'),
+    new Recipe(
+      'A test recipe2',
+      'test description2',
       'https://www.campbellsoup.co.uk/img/recipes/6-campbells-vegetarian-pizza-recipe.jpg')
   ];
   constructor() { }
