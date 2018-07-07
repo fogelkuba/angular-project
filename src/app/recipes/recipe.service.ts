@@ -12,7 +12,7 @@ export class RecipeService{
       'campbells vegetarian pizza recipe',
       'https://www.campbellsoup.co.uk/img/recipes/6-campbells-vegetarian-pizza-recipe.jpg',
       [
-        new Ingredient('Meat', 1),
+        new Ingredient('Ham', 1),
         new Ingredient('Ananas', 10)
       ]),
     new Recipe(
