@@ -2,17 +2,17 @@ import {Ingredient} from "../shared/ingredient.model";
 
 export class ShoppingListService{
 
-  private ingredientes: Ingredient[] = [
+  private ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
     new Ingredient('Tomatoes', 10),
     new Ingredient('Banannas', 20),
   ];
 
   getIngredients(){
-    return this.ingredientes.slice();
+    return this.ingredients.slice();
   }
 
   addIngredient(ingredient: Ingredient){
-    this.ingredientes.push(ingredient);
+    this.ingredients.push(ingredient);
   }
 }
