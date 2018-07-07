@@ -19,4 +19,12 @@ ingredientsChanged = new EventEmitter<Ingredient[]>();
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+
+  addIngredients(ingredients: Ingredient[]){
+    // ingredientsToAdd.forEach(item => {
+    //   this.ingredients.push(item)
+    // })
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 }
