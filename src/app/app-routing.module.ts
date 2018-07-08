@@ -8,6 +8,7 @@ import {RecipeDetailComponent} from "./recipes/recipe-detail/recipe-detail.compo
 const appRoutes: Routes = [
   {path: '', redirectTo: '/recipes', pathMatch: 'full'},
   {path: 'recipes', component: RecipesComponent, children:[
+      {path: '', component: RecipeDetailComponent}
       {path: ':id', component: RecipeDetailComponent}
     ]},
 
