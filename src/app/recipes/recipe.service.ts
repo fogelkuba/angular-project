@@ -41,7 +41,7 @@ export class RecipeService{
     this.shoppingListService.addIngredients(ingredients);
   }
 
-  getRecipeById(){
-
+  getRecipe(id: number){
+    return this.recipes[id];
   }
 }
