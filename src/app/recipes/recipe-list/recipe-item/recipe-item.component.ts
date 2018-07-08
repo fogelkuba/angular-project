@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input,} from '@angular/core';
 import {Router} from "@angular/router";
 
 import {Recipe} from '../../recipe.model';
@@ -10,7 +10,7 @@ import {RecipeService} from "../../recipe.service";
   styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent implements OnInit {
-  recipe: Recipe;
+  @Input() recipe: Recipe;
 
   constructor(private recipeService: RecipeService,
               private router: Router) {
