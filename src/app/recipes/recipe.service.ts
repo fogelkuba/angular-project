@@ -25,6 +25,15 @@ export class RecipeService{
         new Ingredient('Noodle', 10),
         new Ingredient('Vegetables', 5),
       ]),
+    new Recipe(
+      'Beef Tacos',
+      'All American Beef Tacos',
+      'http://www.fnstatic.co.uk/images/content/recipe/beef-tacos.jpg',
+      [
+        new Ingredient('Beef', 4),
+        new Ingredient('Bread', 2),
+        new Ingredient('Vegetables', 1),
+      ]),
   ];
 
   constructor(private shoppingListService: ShoppingListService){}
