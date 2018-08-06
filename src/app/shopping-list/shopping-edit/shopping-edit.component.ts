@@ -31,7 +31,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
           this.editedItem = this.shoppingListService.getIngredient(index);
           this.slForm.setValue({
             name: this.editedItem.name,
-            value: this.editedItem.amount
+            amount: this.editedItem.amount
           })
         }
       )
