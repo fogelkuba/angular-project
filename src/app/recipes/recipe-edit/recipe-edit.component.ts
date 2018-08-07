@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
 import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
 import {RecipeService} from "../recipe.service";
+import {Recipe} from "../recipe.model";
 
 
 @Component({
@@ -30,9 +31,9 @@ export class RecipeEditComponent implements OnInit {
 
   private initForm() {
     let recipeName = '',
-        recipeImagePath = '',
-        recipeDescription = '',
-        recipeIngredients = new FormArray([]);
+      recipeImagePath = '',
+      recipeDescription = '',
+      recipeIngredients = new FormArray([]);
 
     if (this.editMode) {
       const recipe = this.recipeService.getRecipe(this.id);
@@ -40,7 +41,7 @@ export class RecipeEditComponent implements OnInit {
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
       if (recipe['ingredients']) {
-        for (let ingredient of recipe.ingredients){
+        for (let ingredient of recipe.ingredients) {
           recipeIngredients.push(
             new FormGroup({
               'name': new FormControl(ingredient.name, Validators.required),
@@ -57,13 +58,24 @@ export class RecipeEditComponent implements OnInit {
     this.recipeForm = new FormGroup({
       'name': new FormControl(recipeName, Validators.required),
       'imagePath': new FormControl(recipeImagePath, Validators.required),
-      'description': new FormControl(recipeDescription, Validators.required ),
+      'description': new FormControl(recipeDescription, Validators.required),
       'ingredients': recipeIngredients
     });
   }
 
   onSubmit() {
-    console.log(this.recipeForm);
+    // console.log(this.recipeForm);
+    const newRecipe = new Recipe(
+      this.recipeForm.value['name'],
+      this.recipeForm.value['description'],
+      this.recipeForm.value['imagePath'],
+      this.recipeForm.value['ingredients'],
+    );
+    if (this.editMode) {
+      this.recipeService.updateRecipe(this.id, newRecipe)
+    } else {
+      this.recipeService.addRecipe(newRecipe)
+    }
   }
 
   onAddIngredient() {
