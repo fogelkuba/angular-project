@@ -31,6 +31,7 @@ export class RecipeEditComponent implements OnInit {
     let recipeName = '';
 
     if (this.editMode) {
+      const recipe = this.recipeService.getRecipe(this.id);
       recipeName = this.recipeService
     }
 
