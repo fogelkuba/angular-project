@@ -28,7 +28,9 @@ export class RecipeEditComponent implements OnInit {
   }
 
   private initForm() {
-    let recipeName = '';
+    let recipeName = '',
+        recipeImagePath = '',
+        recipeDescription = '';
 
     if (this.editMode) {
       const recipe = this.recipeService.getRecipe(this.id);
