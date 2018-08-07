@@ -54,7 +54,9 @@
           <div
             class="row"
             *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
-            [formGroupName]="i">
+            [formGroupName]="i"
+            style="margin-bottom: 1rem"
+          >
             <div class="col-xs-8">
               <input
                 id="value"
@@ -70,9 +72,14 @@
                 type="number">
             </div>
             <div class="col-xs-2">
-              <button class="btn btn-danger">X</button>
+              <button type="button" class="btn btn-danger">X</button>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <hr><button type="button" class="btn btn-success" (click)="onAddIngredient()">Add ingredient</button>
         </div>
       </div>
 
