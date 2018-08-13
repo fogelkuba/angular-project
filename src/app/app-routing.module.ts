@@ -21,8 +21,8 @@ const appRoutes: Routes = [
     },
 
     {path: 'shopping-list', component: ShoppingListComponent},
-    {path: 'singup', component: SignupComponent},
-    {path: 'singin', component: SigninComponent},
+    {path: 'signup', component: SignupComponent},
+    {path: 'signin', component: SigninComponent},
     {path: '**', redirectTo: '/recipes'}
 ]
 
