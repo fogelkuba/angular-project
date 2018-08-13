@@ -14,7 +14,7 @@ export class HeaderComponent {
         this.dataStorageService.storeRecipes()
             .subscribe(
                 (response: Response) => {
-                    
+                    console.log(response);
                 });
     }
 }
