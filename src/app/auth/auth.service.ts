@@ -5,6 +5,7 @@ import * as firebase from 'firebase';
 
 export class AuthService {
     signupUser(email: string, password: string) {
+        console.log('auth');
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .catch(
             err => {
