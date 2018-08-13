@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
     ngOnInit() {
     }
 
-    onSignin() {
+    onSignup() {
 
     }
 

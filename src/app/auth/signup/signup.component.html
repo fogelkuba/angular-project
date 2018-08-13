@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSingup()">
+<form (ngSubmit)="onSingup(f)" #f="ngForm">
     <div class="form-group">
         <label for="email">Mail</label>
         <input type="email" id="email" name="email" ngModel>
