@@ -15,6 +15,18 @@ export class DataStorageService {
 
     fetchRecipes() {
         return this.http.get(this.url + 'recipes.json')
+            // .map(
+            //     (response: Response) => {
+            //         const recipes: Recipe[] = response.json();
+            //         for (let recipe of recipes) {
+            //             console.log(recipe);
+            //             if (!recipe['ingredients']) {
+            //                 recipe['ingredients'] = [];
+            //             }
+            //         }
+            //         return recipes
+            //     }
+            // )
             .subscribe(
                 (response: Response) => {
                     const recipes: Recipe[] = response.json();
