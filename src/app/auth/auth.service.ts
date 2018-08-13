@@ -7,10 +7,10 @@ export class AuthService {
         console.log('auth');
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .catch(
-            err => {
-                console.log(err);
-            }
-        )
+                err => {
+                    console.log(err);
+                }
+            )
     }
 
     signinUser(email: string, password: string) {
@@ -18,11 +18,10 @@ export class AuthService {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
                 response => {
-                     firebase.auth().currentUser.getIdToken().then(
-                         TOKEN: string => {
-                             this.token = token;
-                    }
-                     );
+                    firebase.auth().currentUser.getIdToken().then(
+                        (token: string) => {
+                            this.token = token;
+                        });
                     console.log(response);
                 }
             )
@@ -34,6 +33,11 @@ export class AuthService {
     }
 
     getIdToken() {
-        firebase.auth().currentUser.getIdToken();
+        firebase.auth().currentUser.getIdToken().then(
+            (token: string) => {
+                this.token = token;
+            });
+        return this.token;
     }
+
 }
