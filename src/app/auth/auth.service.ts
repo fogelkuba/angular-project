@@ -25,4 +25,8 @@ export class AuthService {
                 }
             )
     }
+
+    getIdToken() {
+        return firebase.auth().currentUser.getIdToken();
+    }
 }
