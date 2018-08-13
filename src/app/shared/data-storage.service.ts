@@ -28,7 +28,7 @@ export class DataStorageService {
             //     }
             // )
             .subscribe(
-                (response: Response) => {
+                (response) => {
                     const recipes: Recipe[] = response.json();
                     this.recipeService.setRecipes(recipes)
                 }
