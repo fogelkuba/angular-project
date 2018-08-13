@@ -19,12 +19,8 @@ export class DataStorageService {
     }
 
     fetchRecipes() {
-        this.auth.getIdToken()
-            .then(
-                token: string => {
+        const token = this.auth.getIdToken();
 
-        }
-            )
         return this.http.get(this.url + 'recipes.json')
             // .map(
             //     (response: Response) => {
