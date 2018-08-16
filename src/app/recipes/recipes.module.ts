@@ -18,7 +18,7 @@ import {DropdownDirective} from "../shared/dropdown.directive";
         RecipeStartComponent,
         RecipeItemComponent,
         RecipeEditComponent,
-        
+
     ],
     imports : [
         CommonModule,
