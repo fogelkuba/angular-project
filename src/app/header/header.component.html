@@ -13,13 +13,15 @@
                 <li><a routerLink="/shopping-list" routerLinkActive="active">Shopping List</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a routerLink="/signup">Register</a>
-                </li>
-                <li>
-                    <a routerLink="/signin">Login</a>
-                </li>
-                <li class="dropdown" appDropdown>
+                <ng-template [ngIf]="!auth.isAuthenticated()">
+                    <li>
+                        <a routerLink="/signup">Register</a>
+                    </li>
+                    <li>
+                        <a routerLink="/signin">Login</a>
+                    </li>
+                </ng-template>
+                <li class="dropdown" *ngIf="auth.isAuthenticated()" appDropdown>
                     <a class="dropdown-toggle" style="cursor: pointer" role="button">Options<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a style="cursor: pointer" (click)="onSaveData()">Save data</a></li>
