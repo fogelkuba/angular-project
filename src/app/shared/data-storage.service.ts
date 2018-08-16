@@ -9,7 +9,6 @@ export class DataStorageService {
     constructor (private http: Http,
                  private recipeService: RecipeService,
                  private auth: AuthService
-
     ) {}
 
     private url = 'https://ng-recipe-book-f046d.firebaseio.com/';
