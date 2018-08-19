@@ -8,7 +8,7 @@ import {AuthService} from "../auth/auth.service";
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-    constructor(private dataStorageService: DataStorageService, private auth: AuthService) {
+    constructor(public dataStorageService: DataStorageService, public auth: AuthService) {
     }
 
     onSaveData() {
