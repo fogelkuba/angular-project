@@ -29,6 +29,7 @@ import {ShoppingListModule} from "./shopping-list/shopping-list.module";
         RecipesModule,
         SharedModule,
         HttpModule,
+        FormsModule,
         AppRoutingModule,
         ShoppingListModule
     ],
