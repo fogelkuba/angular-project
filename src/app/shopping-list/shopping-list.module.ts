@@ -12,7 +12,11 @@ import {FormsModule} from "@angular/forms";
     imports: [
         CommonModule,
         FormsModule
-    ]
+    ],
+    // exports: [
+    // Wrong practice - each module must be provided with required modules
+    //     FormsModule
+    // ]
 })
 
 export class ShoppingListModule {
