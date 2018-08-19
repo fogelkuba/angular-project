@@ -1,5 +1,4 @@
 import {
-    ActivatedRoute,
     ActivatedRouteSnapshot,
     CanActivate,
     RouterStateSnapshot
