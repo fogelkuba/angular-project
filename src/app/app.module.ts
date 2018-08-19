@@ -16,22 +16,24 @@ import {AuthGuard} from "./auth/auth-guard.service";
 import {RecipesModule} from "./recipes/recipes.module";
 import {SharedModule} from "./shared/shared.module";
 import {ShoppingListModule} from "./shopping-list/shopping-list.module";
+import {AuthModule} from "./auth/auth.module";
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
-        SignupComponent,
-        SigninComponent
+        // SignupComponent,
+        // SigninComponent
     ],
     imports: [
         BrowserModule,
         RecipesModule,
         SharedModule,
         HttpModule,
-        FormsModule,
+        // FormsModule,
         AppRoutingModule,
-        ShoppingListModule
+        ShoppingListModule,
+        AuthModule
     ],
     providers: [
         ShoppingListService,
